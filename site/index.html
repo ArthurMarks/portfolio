@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Alteração de conteúdo usando 'fetch' -->
+            <ul>
+                <li onclick="loadContent('./content/home.html')">Home</li>
+                <li onclick="loadContent('./content/projects.html')">Projects</li>
+                <li onclick="loadContent('./content/more.html')">More info</a></li>
+            </ul>
+        </nav> <!-- Irá mudar para um select quando a tela for pequena -->
+        <div>
+            <h1>Portfolio</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere modi perspiciatis fugiat doloremque quidem quas aliquid. Doloremque, consequatur. Eum reiciendis soluta nesciunt doloribus praesentium ipsum facilis ducimus voluptatum explicabo dolore!</p>
+            <button onclick="loadContent('./content/more.html')">FIND OUT MORE</button>
+        </div>
+    </header>
+    <main>
+        <!-- Conteúdo renderizado condicionalmente aqui -->
+    </main>
+    <footer>
+        <section>
+            <h2>Thanks for visiting</h2>
+            <p>Layout made using <a href="https://squarespace.com/">Squarespace</a></p>
+        </section>
+        <section>
+            <div>
+                <h3>Location</h3>
+                <p></p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p></p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
