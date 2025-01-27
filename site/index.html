@@ -3,41 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
 <body>
     <header>
         <nav>
             <!-- Alteração de conteúdo usando 'fetch' -->
-            <ul>
-                <li onclick="loadContent('./content/home.html')">Home</li>
-                <li onclick="loadContent('./content/projects.html')">Projects</li>
-                <li onclick="loadContent('./content/more.html')">More info</a></li>
-            </ul>
-        </nav> <!-- Irá mudar para um select quando a tela for pequena -->
-        <div>
+            <div class="nav-icon" onclick="handleOptions()">
+                <div class="bar-top"></div>
+                <div class="bar-bottom"></div>
+            </div>
+            <div class="panel">
+                <ul>
+                    <li onclick="handleAll('home')">Home</li>
+                    <li onclick="handleAll('projects')">Projects</li>
+                    <li onclick="handleAll('mi')">More info</li>
+                </ul>
+            </div>
+        </nav> <!-- Irá mudar quando a tela for pequena -->
+        <div class="portfolio">
             <h1>Portfolio</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere modi perspiciatis fugiat doloremque quidem quas aliquid. Doloremque, consequatur. Eum reiciendis soluta nesciunt doloribus praesentium ipsum facilis ducimus voluptatum explicabo dolore!</p>
-            <button onclick="loadContent('./content/more.html')">FIND OUT MORE</button>
+            <button onclick="loadContent('mi')">FIND OUT MORE</button>
         </div>
     </header>
-    <main>
+    <main id="main">
         <!-- Conteúdo renderizado condicionalmente aqui -->
     </main>
     <footer>
-        <section>
+        <section class="final">
             <h2>Thanks for visiting</h2>
             <p>Layout made using <a href="https://squarespace.com/">Squarespace</a></p>
         </section>
-        <section>
+        <section class="extra">
             <div>
                 <h3>Location</h3>
-                <p></p>
+                <p>#</p>
             </div>
             <div>
                 <h3>Contact</h3>
-                <p></p>
+                <p>#</p>
             </div>
         </section>
     </footer>
