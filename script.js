@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadContent('home')
+    loadContent('projects')
 })
 // Carrega em 'main' o conteúdo da página principal
 
@@ -33,12 +33,10 @@ let active = false
 
 window.addEventListener('resize', () => {
     const panel = document.querySelector('.panel')
+    const condition = window.innerWidth > 800
 
-    if (window.innerWidth > 800) {
-        panel.style.display = 'block'
-    } else if (!active) {
-        panel.style.display = 'none'
-    }
+    panel.style.display = condition || active ? 'block' : 'none'
+    document.body.style.overflow = condition || !active ? 'auto' : 'hidden'
 })
 // Executa sempre que a tela altera de tamanho
 
@@ -65,6 +63,5 @@ function handleOptions() {
 function handleAll(content) {
     loadContent(content)
     if (window.innerWidth <= 800) handleOptions()
-    window.location = '#main'
 }
 // Função que lida com telas pequenas e grandes
